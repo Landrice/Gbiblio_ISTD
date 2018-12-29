@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane id="AnchorPane" prefHeight="560.0" prefWidth="713.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlleurGui.app.membres.AddMembresController">
+   <children>
+      <HBox alignment="CENTER" layoutX="310.0" layoutY="177.0" prefHeight="481.0" prefWidth="612.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="560.0" prefWidth="559.0">
+               <children>
+                  <ScrollPane layoutX="64.0" layoutY="57.0" prefHeight="560.0" prefWidth="559.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <content>
+                        <AnchorPane prefHeight="514.0" prefWidth="557.0">
+                           <children>
+                              <GridPane layoutX="9.0" layoutY="4.0" prefHeight="514.0" prefWidth="557.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Label text="Numero Etudiant :" GridPane.columnSpan="2" />
+                                    <Label text="Nom :" GridPane.rowIndex="2" />
+                                    <Label text="Prénom :" GridPane.rowIndex="4" />
+                                    <Label text="Parcours :" GridPane.rowIndex="8" />
+                                    <Label text="Date de Naissance" GridPane.rowIndex="10" />
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="5">
+                                       <children>
+                                          <Button fx:id="btnAttachImage" layoutX="51.0" layoutY="4.0" mnemonicParsing="false" onAction="#btnAttachImageOnAction" prefHeight="25.0" prefWidth="149.0" style="-fx-border-color: red; -fx-border-radius: 20; -fx-background-color: transparent;" text="Ajouter Image" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowSpan="5">
+                                       <children>
+                                          <ImageView fx:id="imvUsrImg" fitHeight="150.0" fitWidth="152.0" layoutX="48.0" pickOnBounds="true" />
+                                       </children>
+                                    </AnchorPane>
+                                    <TextField fx:id="tfNum" GridPane.columnSpan="3" GridPane.rowIndex="1" />
+                                    <TextField fx:id="tfName" GridPane.columnSpan="3" GridPane.rowIndex="3" />
+                                    <TextField fx:id="tfPName" GridPane.columnSpan="3" GridPane.rowIndex="5" />
+                                    <TextField fx:id="tfParcours" GridPane.columnSpan="3" GridPane.rowIndex="9" />
+                                    <JFXDatePicker fx:id="dpdate" prefHeight="25.0" prefWidth="349.0" GridPane.columnSpan="3" GridPane.rowIndex="11" />
+                                    <Label text="sexe" GridPane.rowIndex="6" />
+                                    <JFXRadioButton fx:id="masc" selected="true" text="Masculin" GridPane.rowIndex="7">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="sexe" />
+                                       </toggleGroup>
+                                    </JFXRadioButton>
+                                    <JFXRadioButton fx:id="fem" text="Feminin" toggleGroup="$sexe" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                                    <JFXButton fx:id="btnSave" buttonType="RAISED" onAction="#btnSaveOnAction" prefHeight="37.0" prefWidth="151.0" style="-fx-border-color: green;" text="Sauvegarder" GridPane.columnIndex="2" GridPane.rowIndex="17" />
+                                    <Label text="Identifiant" GridPane.rowIndex="12" />
+                                    <Label text="mot de Passe" GridPane.rowIndex="14" />
+                                    <TextField fx:id="tFidentifiant" GridPane.columnSpan="3" GridPane.rowIndex="13" />
+                                    <TextField fx:id="tFmdp" GridPane.columnSpan="3" GridPane.rowIndex="15" />
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

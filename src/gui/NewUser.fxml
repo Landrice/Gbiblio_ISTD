@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlleurGui.NewUserController">
+   <children>
+      <BorderPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <HBox prefHeight="50.0" prefWidth="600.0" BorderPane.alignment="CENTER" />
+         </top>
+         <bottom>
+            <HBox alignment="CENTER" prefHeight="44.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Hyperlink fx:id="hlLogin" disable="true" onAction="#hlLogin" opacity="0.0" text="Avez vous déja un  compte? Se connecter" />
+               </children>
+            </HBox>
+         </bottom>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="25.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Inscription du Bibliothecaire">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                        </Text>
+                        <JFXTextField fx:id="tfUserName" alignment="CENTER" labelFloat="true" promptText="Login ou identifiant *">
+                           <tooltip>
+                              <Tooltip text="Ceci est utiliser pour se connecter" />
+                           </tooltip>
+                        </JFXTextField>
+                        <JFXTextField fx:id="tfFullName" alignment="CENTER" labelFloat="true" promptText="Nom et Prénoms" />
+                        <JFXTextField fx:id="pfUserPassword" alignment="CENTER" labelFloat="true" promptText="Mot de Passe *" />
+                        <JFXTextField fx:id="pfReUserPassword" alignment="CENTER" labelFloat="true" onKeyReleased="#pfKeyTyped" promptText="Retaper le mot de passe *" />
+                        <JFXButton fx:id="btnSignUp" buttonType="RAISED" onAction="#btnRegistration" prefHeight="40.0" prefWidth="112.0" ripplerFill="#93ebe5" style="-fx-border-color: cyan;" text="Inscription" />
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
